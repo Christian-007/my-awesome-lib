@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "my-awesome-lib": [
+        "dist/my-awesome-lib"
+      ],
+      "my-awesome-lib/*": [
+        "dist/my-awesome-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
