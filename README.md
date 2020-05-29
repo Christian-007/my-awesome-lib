@@ -1,27 +1,29 @@
-# MyAngularWorkspace
+# **My Awesome Lib**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.26.
+This project is created using `@angular/cli@8.3.26` to showcase an Angular Library that uses secondary entry point configurations.  To use this repo please read the following guidelines.
 
-## Development server
+## Build and package the library
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To build the library use the command:
 
-## Code scaffolding
+```shell
+ng build my-awesome-lib
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then, to package the library without publishing to `npm`:
 
-## Build
+```shell
+npm pack dist/my-awesome-lib 
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Use the packed library in an Angular App
 
-## Running unit tests
+> Before installing the library in an Angular App, ensure the Angular App has the same Angular version as this repo, which is `Angular v8.x`. Otherwise, some errors will occur because there is a difference in the Angular version.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To start using the library, we can install the packed library, which is done in the previous step, by running:
 
-## Running end-to-end tests
+```
+npm i ../path-to-lib/dist/my-awesome-lib
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Now, you should be able to consume the library!
